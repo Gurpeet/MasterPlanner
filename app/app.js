@@ -1,5 +1,5 @@
 (function () {
-    angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit'])
+    angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'app.config'])
         .config(['$stateProvider', '$urlRouterProvider',
             function ($stateProvider, $urlRouterProvider) {
                 $stateProvider
@@ -14,21 +14,21 @@
                         controller: 'menuController as ctrl'
                     })
                     .state('menu.bankcopy', {
-                        url: '/bankcopy',
+                        url: '/bankcopy/id',
                         templateUrl: 'app/views/bankcopy/index.html',
                         controller: 'bankCopyController as ctrl'
                     })
                     .state('menu.tableofcontent', {
-                        url: '/toc',
+                        url: '/toc/id',
                         templateUrl: 'app/views/tableofcontent/index.html'
                     })
                     .state('menu.bidestimate', {
-                        url: '/bid',
+                        url: '/bid/id',
                         templateUrl: 'app/views/bidestimate/index.html',
                         controller: 'bidController as ctrl'
                     })
                     .state('menu.bidnotes', {
-                        url: '/bidnotes',
+                        url: '/bidnotes/id',
                         templateUrl: 'app/views/bidnotes/index.html'
                     })
                     // .state('menu.biddetails', {
@@ -41,9 +41,9 @@
                         templateUrl: 'app/views/projectlist/index.html',
                         controller: 'projectListController as ctrl',
                         resolve: {
-                            projects: ['$q', function ($q) {
+                            projects: ['$q', 'dbPath', function ($q, dbPath) {
                                 var fs = require('fs'),
-                                    filePath = './data/data.json';
+                                    filePath = dbPath + 'projects.json';
                                 var dfd = $q.defer();
                                 fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
                                     if (!err) {
@@ -61,13 +61,46 @@
                         templateUrl: 'app/views/project/index.html'
                     })
                     .state('menu.projectstatus', {
-                        url: '/projectstatus',
+                        url: '/projectstatus/id',
                         templateUrl: 'app/views/projectstatus/index.html',
                         controller: 'projectStatusController as ctrl'
                     })
-
+                    .state('menu.costvariance', {
+                        url: '/costvariance/id',
+                        templateUrl: 'app/views/costvariance/index.html',
+                        controller: 'costvarianceController as ctrl',
+                        resolve: {
+                            items: ['$q', 'dbPath', function ($q, dbPath) {
+                                //Use provider service
+                                var fs = require('fs'),
+                                    filePath = dbPath + 'item-list.json';
+                                var dfd = $q.defer();
+                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
+                                    if (!err) {
+                                        dfd.resolve(JSON.parse(fileData));
+                                    } else {
+                                        console.log(err);
+                                    }
+                                });
+                                return dfd.promise;
+                            }],
+                            costvariance: ['$q', 'dbPath', function ($q, dbPath) {
+                                var fs = require('fs'),
+                                    filePath = dbPath + 'cost-variance.json';
+                                var dfd = $q.defer();
+                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
+                                    if (!err) {
+                                        dfd.resolve(JSON.parse(fileData));
+                                    } else {
+                                        console.log(err);
+                                    }
+                                });
+                                return dfd.promise;
+                            }]
+                        }
+                    })
                     .state('menu.photos', {
-                        url: '/photos',
+                        url: '/photos/id',
                         templateUrl: 'app/views/photos/index.html',
                         controller: 'photoController as ctrl',
                         resolve: {
@@ -87,21 +120,36 @@
                         }
                     })
                     .state('menu.punch', {
-                        url: '/punch',
+                        url: '/punch/id',
                         templateUrl: 'app/views/punch/index.html'
                     })
                     .state('menu.flowchart', {
-                        url: '/flowchart',
+                        url: '/flowchart/id',
                         templateUrl: 'app/views/flowchart/index.html',
                         controller: 'flowchartController as ctrl'
                     })
                     .state('menu.subcontractors', {
-                        url: '/subcontractors',
+                        url: '/subcontractors/id',
                         templateUrl: 'app/views/subcontractors/index.html',
-                        controller: 'subContractorController as ctrl'
+                        controller: 'subContractorController as ctrl',
+                        resolve: {
+                            subcontractors: ['$q', 'dbPath', function ($q, dbPath) {
+                                var fs = require('fs'),
+                                    filePath = dbPath + 'sub-contractors.json';
+                                var dfd = $q.defer();
+                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
+                                    if (!err) {
+                                        dfd.resolve(JSON.parse(fileData));
+                                    } else {
+                                        console.log(err);
+                                    }
+                                });
+                                return dfd.promise;
+                            }]
+                        }
                     })
                     .state('menu.suppliers', {
-                        url: '/suppliers',
+                        url: '/suppliers/id',
                         templateUrl: 'app/views/suppliers/index.html',
                         controller: 'suppliersController as ctrl'
                     })

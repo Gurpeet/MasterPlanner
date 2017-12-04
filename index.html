@@ -26,6 +26,7 @@
 <body ng-app="app" id="page-top">
     <div ui-view></div>
     <script>
+        require('./app/helpers/configSettings')
         require('./app/app')
         require('./app/controllers/homeController')
         require('./app/controllers/menuController')
@@ -38,6 +39,7 @@
         require('./app/controllers/subContractorController')
         require('./app/controllers/suppliersController')
         require('./app/controllers/projectStatusController')
+        require('./app/controllers/costvarianceController')
     </script>
 </body>
 
