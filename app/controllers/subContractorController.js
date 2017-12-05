@@ -1,7 +1,7 @@
 (function () {
     angular.module('app')
-        .controller('subContractorController', ['subcontractors', '$scope', function (subcontractors, $scope) {
-
+        .controller('subContractorController', ['subcontractors', '$scope', 'providerService', 
+            function (subcontractors, $scope, providerService) {
             var self = this;
             function init() {
                 self.gridOptions = {};
@@ -18,13 +18,11 @@
                 ];
                 self.gridOptions.data = subcontractors;
                 self.gridOptions.onRegisterApi = function (gridApi) {
-                    //set gridApi on scope
+                    // set gridApi on scope
                     self.gridApi = gridApi;
                     self.gridApi.edit.on.afterCellEdit($scope, function (rowEntity, colDef, newValue, oldValue) {
-                        //update file save new value
-                        console.log('edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue);
+                        // console.log('edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue);
                         save();
-                        //$scope.$apply();
                     });
                 };
             };
@@ -35,10 +33,14 @@
                     itemId = Math.max.apply(Math, subcontractors.map(function (item) { return item.id; })) + 1;
                 }
                 subcontractors.push({ "id": itemId });
-            }
+            };
 
             let save = function () {
-                console.log(self.gridOptions.data);
+                providerService.writeFile('sub-contractors', self.gridOptions.data).then(function (res) {
+                    console.log('saved');
+                }, function(err){
+                    console.log('error');
+                });
             };
 
             init();

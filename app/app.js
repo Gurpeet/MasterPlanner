@@ -1,6 +1,6 @@
 (function () {
-    angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'app.config'])
-        .config(['$stateProvider', '$urlRouterProvider',
+    angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'app.config', 'app.services'])
+        .config(['$stateProvider', '$urlRouterProvider', 
             function ($stateProvider, $urlRouterProvider) {
                 $stateProvider
                     .state('home', {
@@ -41,18 +41,8 @@
                         templateUrl: 'app/views/projectlist/index.html',
                         controller: 'projectListController as ctrl',
                         resolve: {
-                            projects: ['$q', 'dbPath', function ($q, dbPath) {
-                                var fs = require('fs'),
-                                    filePath = dbPath + 'projects.json';
-                                var dfd = $q.defer();
-                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
-                                    if (!err) {
-                                        dfd.resolve(JSON.parse(fileData));
-                                    } else {
-                                        console.log(err);
-                                    }
-                                });
-                                return dfd.promise;
+                            projects: ['providerService', function (providerService) {
+                                return providerService.readFile('projects');
                             }]
                         }
                     })
@@ -70,32 +60,11 @@
                         templateUrl: 'app/views/costvariance/index.html',
                         controller: 'costvarianceController as ctrl',
                         resolve: {
-                            items: ['$q', 'dbPath', function ($q, dbPath) {
-                                //Use provider service
-                                var fs = require('fs'),
-                                    filePath = dbPath + 'item-list.json';
-                                var dfd = $q.defer();
-                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
-                                    if (!err) {
-                                        dfd.resolve(JSON.parse(fileData));
-                                    } else {
-                                        console.log(err);
-                                    }
-                                });
-                                return dfd.promise;
+                            items: ['providerService', function (providerService) {
+                                return providerService.readFile('item-list');
                             }],
-                            costvariance: ['$q', 'dbPath', function ($q, dbPath) {
-                                var fs = require('fs'),
-                                    filePath = dbPath + 'cost-variance.json';
-                                var dfd = $q.defer();
-                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
-                                    if (!err) {
-                                        dfd.resolve(JSON.parse(fileData));
-                                    } else {
-                                        console.log(err);
-                                    }
-                                });
-                                return dfd.promise;
+                            costvariance: ['providerService', function (providerService) {
+                                return providerService.readFile('cost-variance');
                             }]
                         }
                     })
@@ -111,7 +80,7 @@
                                 var imgList = [];
                                 fs.readdir(filePath, (err, files) => {
                                     files.forEach(file => {
-                                        imgList.push({image: './data/images/' + file});
+                                        imgList.push({ image: './data/images/' + file });
                                     });
                                     dfd.resolve(imgList);
                                 });
@@ -133,18 +102,8 @@
                         templateUrl: 'app/views/subcontractors/index.html',
                         controller: 'subContractorController as ctrl',
                         resolve: {
-                            subcontractors: ['$q', 'dbPath', function ($q, dbPath) {
-                                var fs = require('fs'),
-                                    filePath = dbPath + 'sub-contractors.json';
-                                var dfd = $q.defer();
-                                fs.readFile(filePath, { encoding: 'utf-8' }, function (err, fileData) {
-                                    if (!err) {
-                                        dfd.resolve(JSON.parse(fileData));
-                                    } else {
-                                        console.log(err);
-                                    }
-                                });
-                                return dfd.promise;
+                            subcontractors: ['providerService', function (providerService) {
+                                return providerService.readFile('sub-contractors');
                             }]
                         }
                     })
