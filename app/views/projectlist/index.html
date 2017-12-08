@@ -1,6 +1,13 @@
 <div class="row">
     <div class="col-md-12">
-        <div id="gridProjects" ui-grid="ctrl.gridOptions" ui-grid-edit class="grid">
+        <div class="panel panel-default">
+            <div id="gridProjects" ui-grid="ctrl.gridOptions" ui-grid-edit class="grid">
+            </div>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 pull-right">
+        <input type="button" value="Add New" ui-sref="project({id: id})" class="btn btn-info btn-block">
     </div>
 </div>

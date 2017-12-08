@@ -8,12 +8,12 @@
                     columnDefs: [
                         { name: 'Project', field: 'project', enableCellEdit: true, enableCellEditOnFocus: true },
                         { name: 'Owner', field: 'owner' },
-                        { name: 'Address', field: 'address' }
+                        { name: 'Address', field: 'address' },
+                        { name: '', field: 'ww', width: "5%", cellTemplate: '<i class="fa fa-sign-in fa-lg" ui-sref="menu.updateproject({id: id})" aria-hidden="true"></i>'}
                     ],
                     data: projects
                 };
             };
-
             init();
         }])
 })();

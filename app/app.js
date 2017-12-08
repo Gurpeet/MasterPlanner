@@ -14,21 +14,21 @@
                         controller: 'menuController as ctrl'
                     })
                     .state('menu.bankcopy', {
-                        url: '/bankcopy/id',
+                        url: '/bankcopy/:id',
                         templateUrl: 'app/views/bankcopy/index.html',
                         controller: 'bankCopyController as ctrl'
                     })
                     .state('menu.tableofcontent', {
-                        url: '/toc/id',
+                        url: '/toc/:id',
                         templateUrl: 'app/views/tableofcontent/index.html'
                     })
                     .state('menu.bidestimate', {
-                        url: '/bid/id',
+                        url: '/bid/:id',
                         templateUrl: 'app/views/bidestimate/index.html',
                         controller: 'bidController as ctrl'
                     })
                     .state('menu.bidnotes', {
-                        url: '/bidnotes/id',
+                        url: '/bidnotes/:id',
                         templateUrl: 'app/views/bidnotes/index.html'
                     })
                     // .state('menu.biddetails', {
@@ -36,7 +36,7 @@
                     //     templateUrl: 'app/views/bidestimate/bidestimates.html',
                     //     controller: 'bidEstimatesController as ctrl'
                     // })
-                    .state('menu.projectlist', {
+                    .state('projectlist', {
                         url: '/projectlist',
                         templateUrl: 'app/views/projectlist/index.html',
                         controller: 'projectListController as ctrl',
@@ -46,17 +46,21 @@
                             }]
                         }
                     })
-                    .state('menu.project', {
-                        url: '/project',
+                    .state('project', {
+                        url: '/project/:id',
+                        templateUrl: 'app/views/project/index.html'
+                    })
+                    .state('menu.updateproject', {
+                        url: '/project/:id',
                         templateUrl: 'app/views/project/index.html'
                     })
                     .state('menu.projectstatus', {
-                        url: '/projectstatus/id',
+                        url: '/projectstatus/:id',
                         templateUrl: 'app/views/projectstatus/index.html',
                         controller: 'projectStatusController as ctrl'
                     })
                     .state('menu.costvariance', {
-                        url: '/costvariance/id',
+                        url: '/costvariance/:id',
                         templateUrl: 'app/views/costvariance/index.html',
                         controller: 'costvarianceController as ctrl',
                         resolve: {
@@ -69,7 +73,7 @@
                         }
                     })
                     .state('menu.photos', {
-                        url: '/photos/id',
+                        url: '/photos/:id',
                         templateUrl: 'app/views/photos/index.html',
                         controller: 'photoController as ctrl',
                         resolve: {
@@ -89,16 +93,16 @@
                         }
                     })
                     .state('menu.punch', {
-                        url: '/punch/id',
+                        url: '/punch/:id',
                         templateUrl: 'app/views/punch/index.html'
                     })
                     .state('menu.flowchart', {
-                        url: '/flowchart/id',
+                        url: '/flowchart/:id',
                         templateUrl: 'app/views/flowchart/index.html',
                         controller: 'flowchartController as ctrl'
                     })
                     .state('menu.subcontractors', {
-                        url: '/subcontractors/id',
+                        url: '/subcontractors/:id',
                         templateUrl: 'app/views/subcontractors/index.html',
                         controller: 'subContractorController as ctrl',
                         resolve: {
@@ -108,7 +112,7 @@
                         }
                     })
                     .state('menu.suppliers', {
-                        url: '/suppliers/id',
+                        url: '/suppliers/:id',
                         templateUrl: 'app/views/suppliers/index.html',
                         controller: 'suppliersController as ctrl'
                     })
