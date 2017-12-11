@@ -48,11 +48,13 @@
                     })
                     .state('project', {
                         url: '/project/:id',
-                        templateUrl: 'app/views/project/index.html'
+                        templateUrl: 'app/views/project/index.html',
+                        controller: 'projectController as ctrl'
                     })
                     .state('menu.updateproject', {
                         url: '/project/:id',
-                        templateUrl: 'app/views/project/index.html'
+                        templateUrl: 'app/views/project/index.html',
+                        controller: 'projectController as ctrl'
                     })
                     .state('menu.projectstatus', {
                         url: '/projectstatus/:id',
