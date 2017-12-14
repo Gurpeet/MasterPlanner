@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Office",
+        "owner": "Gurpreet",
+        "address": "India"
+    },
+    {
+        "id": 2,
+        "name": "Home",
+        "owner": "Shamim",
+        "address": "Plano Texas"
+    }
+]
