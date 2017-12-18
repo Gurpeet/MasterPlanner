@@ -47,7 +47,7 @@
                         }
                     })
                     .state('project', {
-                        url: '/project/:id',
+                        url: '/project',
                         templateUrl: 'app/views/project/index.html',
                         controller: 'projectController as ctrl'
                     })

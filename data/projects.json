@@ -1,14 +1,1 @@
-[
-    {
-        "id": 1,
-        "name": "Office",
-        "owner": "Gurpreet",
-        "address": "India"
-    },
-    {
-        "id": 2,
-        "name": "Home",
-        "owner": "Shamim",
-        "address": "Plano Texas"
-    }
-]
+[{"id":1,"owner":{"first_name":"qqqq","last_name":"qqq"},"builder":{"first_name":"www","last_name":"ww"},"job":{"address":"zxc"},"bank":{"bankname":"qwe","first_name":"zxc","last_name":"we"}}]

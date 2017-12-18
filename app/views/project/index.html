@@ -1,41 +1,43 @@
-<div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Owner Details <small></small></h3>
-            </div>
-            <div class="panel-body">
-                <form role="form">
+<form role="form">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Owner Details
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="first_name" ng-model="ctrl.owner.first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                                <input type="text" name="first_name" ng-model="ctrl.project.owner.first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" ng-model="ctrl.owner.last_name" class="form-control input-sm" placeholder="Last Name">
+                                <input type="text" name="last_name" id="last_name" ng-model="ctrl.project.owner.last_name" class="form-control input-sm" placeholder="Last Name">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-sm" ng-model="ctrl.owner.email" placeholder="Email Address">
+                        <input type="email" name="email" id="email" class="form-control input-sm" ng-model="ctrl.project.owner.email" placeholder="Email Address">
                     </div>
 
                     <div class="form-group">
-                        <input type="address" name="address" id="address" class="form-control input-sm" ng-model="ctrl.owner.address" placeholder="Address">
+                        <input type="address" name="address" id="address" class="form-control input-sm" ng-model="ctrl.project.owner.address" placeholder="Address">
                     </div>
 
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="state" ng-model="ctrl.owner.state" id="state" class="form-control input-sm" placeholder="State">
+                                <input type="text" name="state" ng-model="ctrl.project.owner.state" id="state" class="form-control input-sm" placeholder="State">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="zip" id="zip" ng-model="ctrl.owner.zip" class="form-control input-sm" placeholder="Zip">
+                                <input type="text" name="zip" id="zip" ng-model="ctrl.project.owner.zip" class="form-control input-sm" placeholder="Zip">
                             </div>
                         </div>
                     </div>
@@ -43,65 +45,66 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="officenumber" ng-model="ctrl.owner.officenumber" id="officenumber" class="form-control input-sm"
+                                <input type="text" name="officenumber" ng-model="ctrl.project.owner.officenumber" id="officenumber" class="form-control input-sm"
                                     placeholder="Office#">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="cellnumber" id="cellnumber" ng-model="ctrl.owner.cellnumber" class="form-control input-sm" placeholder="Cell#">
+                                <input type="text" name="cellnumber" id="cellnumber" ng-model="ctrl.project.owner.cellnumber" class="form-control input-sm" placeholder="Cell#">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="homenumber" ng-model="ctrl.owner.homenumber" id="homenumber" class="form-control input-sm" placeholder="Home#">
+                                <input type="text" name="homenumber" ng-model="ctrl.project.owner.homenumber" id="homenumber" class="form-control input-sm" placeholder="Home#">
                             </div>
                         </div>
                     </div>
-                </form>
+
+                </div>
             </div>
         </div>
-    </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Builder Details
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="panel-body">
 
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Builder Details <small></small></h3>
-            </div>
-            <div class="panel-body">
-                <form role="form">
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="first_name" ng-model="ctrl.owner.first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                                <input type="text" name="first_name" ng-model="ctrl.project.builder.first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" ng-model="ctrl.owner.last_name" class="form-control input-sm" placeholder="Last Name">
+                                <input type="text" name="last_name" id="last_name" ng-model="ctrl.project.builder.last_name" class="form-control input-sm" placeholder="Last Name">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-sm" ng-model="ctrl.owner.email" placeholder="Email Address">
+                        <input type="email" name="email" id="email" class="form-control input-sm" ng-model="ctrl.project.builder.email" placeholder="Email Address">
                     </div>
 
                     <div class="form-group">
-                        <input type="address" name="address" id="address" class="form-control input-sm" ng-model="ctrl.owner.address" placeholder="Address">
+                        <input type="address" name="address" id="address" class="form-control input-sm" ng-model="ctrl.project.builder.address" placeholder="Address">
                     </div>
 
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="state" ng-model="ctrl.owner.state" id="state" class="form-control input-sm" placeholder="State">
+                                <input type="text" name="state" ng-model="ctrl.project.builder.state" id="state" class="form-control input-sm" placeholder="State">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="zip" id="zip" ng-model="ctrl.owner.zip" class="form-control input-sm" placeholder="Zip">
+                                <input type="text" name="zip" id="zip" ng-model="ctrl.project.builder.zip" class="form-control input-sm" placeholder="Zip">
                             </div>
                         </div>
                     </div>
@@ -109,76 +112,80 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="officenumber" ng-model="ctrl.owner.officenumber" id="officenumber" class="form-control input-sm"
+                                <input type="text" name="officenumber" ng-model="ctrl.project.builder.officenumber" id="officenumber" class="form-control input-sm"
                                     placeholder="Office#">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="cellnumber" id="cellnumber" ng-model="ctrl.owner.cellnumber" class="form-control input-sm" placeholder="Cell#">
+                                <input type="text" name="cellnumber" id="cellnumber" ng-model="ctrl.project.builder.cellnumber" class="form-control input-sm" placeholder="Cell#">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="homenumber" ng-model="ctrl.owner.homenumber" id="homenumber" class="form-control input-sm" placeholder="Home#">
+                                <input type="text" name="homenumber" ng-model="ctrl.project.builder.homenumber" id="homenumber" class="form-control input-sm" placeholder="Home#">
                             </div>
                         </div>
                     </div>
-                </form>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Job Details <small></small></h3>
-            </div>
-            <div class="panel-body">
-                <form role="form">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Job Details
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+
                     <div class="form-group">
-                        <input type="text" name="address" id="address" class="form-control input-sm" ng-model="ctrl.owner.address" placeholder="Address">
+                        <input type="text" name="address" id="address" class="form-control input-sm" ng-model="ctrl.project.job.address" placeholder="Address">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="city" id="city" class="form-control input-sm" ng-model="ctrl.owner.city" placeholder="City">
+                        <input type="text" name="city" id="city" class="form-control input-sm" ng-model="ctrl.project.job.city" placeholder="City">
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="state" ng-model="ctrl.owner.state" id="state" class="form-control input-sm" placeholder="State">
+                                <input type="text" name="state" ng-model="ctrl.project.job.state" id="state" class="form-control input-sm" placeholder="State">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="zip" id="zip" ng-model="ctrl.owner.zip" class="form-control input-sm" placeholder="Zip">
+                                <input type="text" name="zip" id="zip" ng-model="ctrl.project.job.zip" class="form-control input-sm" placeholder="Zip">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="plannumber" ng-model="ctrl.owner.plannumber" id="plannumber" class="form-control input-sm" placeholder="Plan#">
+                                <input type="text" name="plannumber" ng-model="ctrl.project.job.plannumber" id="plannumber" class="form-control input-sm" placeholder="Plan#">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <strong><small>Total Square Footage (see floor plan)</small></strong>
+                            <strong>
+                                <small>Total Square Footage (see floor plan)</small>
+                            </strong>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="slab" ng-model="ctrl.owner.slab" id="slab" class="form-control input-sm" placeholder="Slab">
+                                <input type="text" name="slab" ng-model="ctrl.project.job.slab" id="slab" class="form-control input-sm" placeholder="Slab">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="acheated" id="acheated" ng-model="ctrl.owner.acheated" class="form-control input-sm" placeholder="A/C & Heated">
+                                <input type="text" name="acheated" id="acheated" ng-model="ctrl.project.job.acheated" class="form-control input-sm" placeholder="A/C & Heated">
                             </div>
                         </div>
                     </div>
@@ -186,90 +193,93 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="driveway" ng-model="ctrl.owner.driveway" id="driveway" class="form-control input-sm" placeholder="Driveway">
+                                <input type="text" name="driveway" ng-model="ctrl.project.job.driveway" id="driveway" class="form-control input-sm" placeholder="Driveway">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="underroof" id="underroof" ng-model="ctrl.owner.underroof" class="form-control input-sm" placeholder="Under Roof">
+                                <input type="text" name="underroof" id="underroof" ng-model="ctrl.project.job.underroof" class="form-control input-sm" placeholder="Under Roof">
                             </div>
                         </div>
                     </div>
 
-
-                </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Bank Details <small></small></h3>
-            </div>
-            <div class="panel-body">
-                <form role="form">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Bank Details
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+
                     <div class="form-group">
-                        <input type="text" name="bankname" id="bankname" class="form-control input-sm" ng-model="ctrl.owner.bankname" placeholder="Bank Name">
+                        <input type="text" name="bankname" id="bankname" class="form-control input-sm" ng-model="ctrl.project.bank.bankname" placeholder="Bank Name">
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="first_name" ng-model="ctrl.owner.first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                                <input type="text" name="first_name" ng-model="ctrl.project.bank.first_name" id="first_name" class="form-control input-sm" placeholder="Contact First Name">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" ng-model="ctrl.owner.last_name" class="form-control input-sm" placeholder="Last Name">
+                                <input type="text" name="last_name" id="last_name" ng-model="ctrl.project.bank.last_name" class="form-control input-sm" placeholder="Contact Last Name">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="laonnumber" id="laonnumber" class="form-control input-sm" ng-model="ctrl.owner.laonnumber" placeholder="Loan Number">
+                        <input type="text" name="laonnumber" id="laonnumber" class="form-control input-sm" ng-model="ctrl.project.bank.laonnumber" placeholder="Loan Number">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="address" id="address" class="form-control input-sm" ng-model="ctrl.owner.address" placeholder="Address">
+                        <input type="text" name="address" id="address" class="form-control input-sm" ng-model="ctrl.project.bank.address" placeholder="Address">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="city" id="city" class="form-control input-sm" ng-model="ctrl.owner.city" placeholder="City">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="state" ng-model="ctrl.owner.state" id="state" class="form-control input-sm" placeholder="State">
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="zip" id="zip" ng-model="ctrl.owner.zip" class="form-control input-sm" placeholder="Zip">
-                            </div>
-                        </div>
+                        <input type="text" name="city" id="city" class="form-control input-sm" ng-model="ctrl.project.bank.city" placeholder="City">
                     </div>
 
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="officenumber" ng-model="ctrl.owner.officenumber" id="officenumber" class="form-control input-sm"
+                                <input type="text" name="state" ng-model="ctrl.project.bank.state" id="state" class="form-control input-sm" placeholder="State">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="zip" id="zip" ng-model="ctrl.project.bank.zip" class="form-control input-sm" placeholder="Zip">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="officenumber" ng-model="ctrl.project.bank.officenumber" id="officenumber" class="form-control input-sm"
                                     placeholder="Office#">
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="cellnumber" id="cellnumber" ng-model="ctrl.owner.cellnumber" class="form-control input-sm" placeholder="Cell#">
+                                <input type="text" name="cellnumber" id="cellnumber" ng-model="ctrl.project.bank.cellnumber" class="form-control input-sm" placeholder="Cell#">
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-3 pull-right">
-        <input type="submit" value="Save" ui-sref="projectlist" class="btn btn-info btn-block">
+    <div class="row">
+        <div class="col-md-3 pull-right">
+            <input type="submit" value="Cancel" ui-sref="projectlist" class="btn btn-info btn-block">
+        </div>
+        <div class="col-md-3 pull-right">
+            <input type="submit" value="Save" ng-click="ctrl.save()" class="btn btn-info btn-block">
+        </div>
     </div>
-</div>
+</form>

@@ -21,9 +21,9 @@
                 var dfd = $q.defer();
                 fs.writeFile(filePath, JSON.stringify(jsonData), function (err) {
                     if (!err) {
-                        dfd.resolve(JSON.parse(fileData));
+                        dfd.resolve(true);
                     } else {
-                        dfd.reject(err);
+                        dfd.reject(false);
                     }
                 });
                 return dfd.promise;
