@@ -27,8 +27,6 @@
                 };
 
                 self.save = function () {
-                    console.log(projectList);
-                    console.log(projectList.indexOf(self.project));
                     providerService.writeFile(dbName, projectList).then(function (response) {
                         if (response) {
                             console.log('saved');

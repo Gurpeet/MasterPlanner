@@ -1,6 +1,7 @@
 (function () {
     angular.module('app')
-        .controller('menuController', [function () {
-
+        .controller('menuController', ['$stateParams', function ($stateParams) {
+            let self = this;
+            self.id = $stateParams.id;
         }])
 })();

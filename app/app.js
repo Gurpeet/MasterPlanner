@@ -9,7 +9,7 @@
                         controller: 'homeController as ctrl'
                     })
                     .state('menu', {
-                        url: '/menu',
+                        url: '/menu/:id',
                         templateUrl: 'app/views/menu/index.html',
                         controller: 'menuController as ctrl'
                     })
