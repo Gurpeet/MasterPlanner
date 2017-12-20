@@ -1,9 +1,26 @@
 (function () {
     angular.module('app')
-        .controller('subContractorController', ['$q', 'subcontractors', '$scope', '$stateParams', 'providerService', 'utils', 'tableName', '$filter',
-            function ($q, subcontractors, $scope, $stateParams, providerService, utils, tableName, $filter) {
+        .controller('subContractorController', ['$q', 'subcontractors', '$scope', '$stateParams', 'providerService', 'utils', 'tableName',
+            function ($q, subcontractors, $scope, $stateParams, providerService, utils, tableName) {
                 var self = this;
                 let allSubcontractors = subcontractors;
+                function save() {
+                    return providerService.writeFile(tableName, allSubcontractors).then(function (res) {
+                        console.log('saved');
+                    }, function (err) {
+                        console.log('error');
+                    });
+                };
+
+                function getSubContrators() {
+                    return providerService.readFile(tableName);
+                };
+
+                function bindGrid() {
+                    self.gridOptions.data = utils.filterDetailsForProject(allSubcontractors, $stateParams.id);
+                };
+
+
                 function init() {
                     self.gridOptions = {};
                     self.gridOptions.enableCellEditOnFocus = true;
@@ -28,6 +45,7 @@
                             save().then(function (res) {
                                 // Read file and bind details again
                                 getSubContrators().then(function (response) {
+                                    allSubcontractors = response;
                                     bindGrid();
                                     //self.gridOptions.data = response;
                                 });
@@ -45,32 +63,11 @@
                     bindGrid();
                 };
 
-                let save = function () {
-                    return providerService.writeFile(tableName, allSubcontractors).then(function (res) {
-                        console.log('saved');
-                    }, function (err) {
-                        console.log('error');
-                    });
-                };
-
-                let getSubContrators = function () {
-                    let dfd = $q.defer();
-                    providerService.readFile(tableName).then(function (response) {
-                        allSubcontractors = response;
-                        dfd.resolve(true);
-                    });
-                    return $q.promise;
-                };
-
-                let bindGrid = function(){
-                    self.gridOptions.data = filterDetailsForProject(allSubcontractors, $stateParams.id);                    
-                };
-
-                let filterDetailsForProject = function (arrData, projectid) {
-                    return $filter('filter')(arrData, function (item) {
-                        return (item.projectid == projectid);
-                    });
-                };
+                // let filterDetailsForProject = function (arrData, projectid) {
+                //     return $filter('filter')(arrData, function (item) {
+                //         return (item.projectid == projectid);
+                //     });
+                // };
 
                 init();
             }])

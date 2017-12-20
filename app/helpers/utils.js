@@ -1,13 +1,20 @@
 (function () {
     angular.module('app.config')
-        .service('utils', [function () {
+        .service('utils', ['$filter', function ($filter) {
 
-            this.getMaxId = function(arr){
+            this.getMaxId = function (arr) {
                 let maxId = 0;
-                if(arr.length > 0){
+                if (arr.length > 0) {
                     maxId = Math.max.apply(Math, arr.map(function (item) { return item.id; }));
                 }
                 return maxId;
-            }
+            };
+
+            this.filterDetailsForProject = function (arrData, projectid) {
+                return $filter('filter')(arrData, function (item) {
+                    return (item.projectid == projectid);
+                });
+            };
+
         }])
 }());
