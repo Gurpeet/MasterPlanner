@@ -1,6 +1,6 @@
 (function () {
     angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'app.config', 'app.services'])
-        .config(['$stateProvider', '$urlRouterProvider', 
+        .config(['$stateProvider', '$urlRouterProvider',
             function ($stateProvider, $urlRouterProvider) {
                 $stateProvider
                     .state('home', {
@@ -16,7 +16,12 @@
                     .state('menu.bankcopy', {
                         url: '/bankcopy/:id',
                         templateUrl: 'app/views/bankcopy/index.html',
-                        controller: 'bankCopyController as ctrl'
+                        controller: 'bankCopyController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'bank-copy';
+                            }]
+                        }
                     })
                     .state('menu.tableofcontent', {
                         url: '/toc/:id',
@@ -25,11 +30,21 @@
                     .state('menu.bidestimate', {
                         url: '/bid/:id',
                         templateUrl: 'app/views/bidestimate/index.html',
-                        controller: 'bidController as ctrl'
+                        controller: 'bidController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'bid-estimate';
+                            }]
+                        }
                     })
                     .state('menu.bidnotes', {
                         url: '/bidnotes/:id',
-                        templateUrl: 'app/views/bidnotes/index.html'
+                        templateUrl: 'app/views/bidnotes/index.html',
+                        resolve: {
+                            tableName: [function () {
+                                return 'bid-notes';
+                            }]
+                        }
                     })
                     // .state('menu.biddetails', {
                     //     url: '/bidestimates',
@@ -41,6 +56,9 @@
                         templateUrl: 'app/views/projectlist/index.html',
                         controller: 'projectListController as ctrl',
                         resolve: {
+                            tableName: [function () {
+                                return 'projects';
+                            }],
                             projects: ['providerService', function (providerService) {
                                 return providerService.readFile('projects');
                             }]
@@ -49,17 +67,32 @@
                     .state('project', {
                         url: '/project',
                         templateUrl: 'app/views/project/index.html',
-                        controller: 'projectController as ctrl'
+                        controller: 'projectController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'projects';
+                            }]
+                        }
                     })
                     .state('menu.updateproject', {
                         url: '/project/:id',
                         templateUrl: 'app/views/project/index.html',
-                        controller: 'projectController as ctrl'
+                        controller: 'projectController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'projects';
+                            }]
+                        }
                     })
                     .state('menu.projectstatus', {
                         url: '/projectstatus/:id',
                         templateUrl: 'app/views/projectstatus/index.html',
-                        controller: 'projectStatusController as ctrl'
+                        controller: 'projectStatusController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'project-status';
+                            }]
+                        }
                     })
                     .state('menu.costvariance', {
                         url: '/costvariance/:id',
@@ -79,18 +112,8 @@
                         templateUrl: 'app/views/photos/index.html',
                         controller: 'photoController as ctrl',
                         resolve: {
-                            images: ['$q', function ($q) {
-                                var fs = require('fs'),
-                                    filePath = './data/images/';
-                                var dfd = $q.defer();
-                                var imgList = [];
-                                fs.readdir(filePath, (err, files) => {
-                                    files.forEach(file => {
-                                        imgList.push({ image: './data/images/' + file });
-                                    });
-                                    dfd.resolve(imgList);
-                                });
-                                return dfd.promise;
+                            images: ['providerService', function (providerService) {
+                                return providerService.readDir('./data/images/');
                             }]
                         }
                     })
@@ -108,6 +131,9 @@
                         templateUrl: 'app/views/subcontractors/index.html',
                         controller: 'subContractorController as ctrl',
                         resolve: {
+                            tableName: [function () {
+                                return 'sub-contractors';
+                            }],
                             subcontractors: ['providerService', function (providerService) {
                                 return providerService.readFile('sub-contractors');
                             }]

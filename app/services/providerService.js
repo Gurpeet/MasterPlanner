@@ -28,7 +28,19 @@
                 });
                 return dfd.promise;
             };
-            
+
+            this.readDir = function (dirPath) {
+                let dfd = $q.defer();
+                let fileList = [];
+                fs.readdir(dirPath, (err, files) => {
+                    files.forEach(file => {
+                        fileList.push({ image: dirPath + file });       // TODO: change image to some other name
+                    });
+                    dfd.resolve(fileList);
+                });
+                return dfd.promise;
+            }
+
 
         }])
 })();
