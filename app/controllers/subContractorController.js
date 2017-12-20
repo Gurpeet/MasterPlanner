@@ -12,7 +12,7 @@
                     });
                 };
 
-                function getSubContrators() {
+                function get() {
                     return providerService.readFile(tableName);
                 };
 
@@ -44,10 +44,9 @@
                             // console.log('edited row id:' + rowEntity.id + ' Column:' + colDef.name + ' newValue:' + newValue + ' oldValue:' + oldValue);
                             save().then(function (res) {
                                 // Read file and bind details again
-                                getSubContrators().then(function (response) {
+                                get().then(function (response) {
                                     allSubcontractors = response;
                                     bindGrid();
-                                    //self.gridOptions.data = response;
                                 });
                             });
                         });

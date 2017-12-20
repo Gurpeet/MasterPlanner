@@ -142,7 +142,15 @@
                     .state('menu.suppliers', {
                         url: '/suppliers/:id',
                         templateUrl: 'app/views/suppliers/index.html',
-                        controller: 'suppliersController as ctrl'
+                        controller: 'suppliersController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'suppliers';
+                            }],
+                            suppliers: ['providerService', function (providerService) {
+                                return providerService.readFile('suppliers');
+                            }]
+                        }
                     })
 
                 $urlRouterProvider.when('', 'home')
