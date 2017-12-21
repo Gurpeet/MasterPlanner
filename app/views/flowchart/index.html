@@ -1,7 +1,14 @@
 <h4>FLOW CHART / SCHEDULE</h4>
 <div class="row">
     <div class="col-md-12">
-        <div id="gridFlowChart" ui-grid="ctrl.gridOptions" ui-grid-edit class="grid">
+        <div class="panel panel-default">
+            <div id="gridFlowChart" ui-grid="ctrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid">
+            </div>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 pull-right">
+        <input type="button" value="Add New" ng-click="ctrl.addNew()" class="btn btn-info btn-block">
     </div>
 </div>

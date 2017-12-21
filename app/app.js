@@ -124,7 +124,15 @@
                     .state('menu.flowchart', {
                         url: '/flowchart/:id',
                         templateUrl: 'app/views/flowchart/index.html',
-                        controller: 'flowchartController as ctrl'
+                        controller: 'flowchartController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'flow-chart';
+                            }],
+                            flowcharts: ['providerService', function (providerService) {
+                                return providerService.readFile('flow-chart');
+                            }]
+                        }
                     })
                     .state('menu.subcontractors', {
                         url: '/subcontractors/:id',
