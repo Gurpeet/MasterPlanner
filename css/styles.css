@@ -1,5 +1,9 @@
 body { padding-top: 3.2rem; }
 
+.grid {
+  height: 70vh; 
+}
+
 h2 {
   margin-bottom: 1.2rem;
   float: left;
