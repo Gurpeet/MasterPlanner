@@ -1,16 +1,16 @@
 <div class="row">
-
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div class="form-group">
-            Job Address : {{ctrl.bidheader.job_address}}
+            Job Address : {{ctrl.bidheader.job.address}}
         </div>
     </div>
     <div class="col-xs-5 col-sm-5 col-md-5">
         <div class="form-group">
-            Slab Square Footage : {{ctrl.bidheader.slab_square_footage}}
+            Slab Square Footage : {{ctrl.bidheader.job.slab}}
         </div>
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div class="form-group">
             Total Price : {{ctrl.bidheader.total_price}}
@@ -18,23 +18,25 @@
     </div>
     <div class="col-xs-5 col-sm-5 col-md-5">
         <div class="form-group">
-            A/C & Heated Square Footage : {{ctrl.bidheader.ac_heated_square_footage}}
+            A/C & Heated Square Footage : {{ctrl.bidheader.job.acheated}}
         </div>
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div class="form-group">
-            Price/Sq foot : {{ctrl.bidheader.price_per_sqfoot}}
+            Price/Sq foot : {{ctrl.bidheader.job.price_per_sqfoot}}
         </div>
     </div>
     <div class="col-xs-5 col-sm-5 col-md-5">
         <div class="form-group">
-            Under Roof Square Footage : {{ctrl.bidheader.under_roof_square_footage}}
+            Under Roof Square Footage : {{ctrl.bidheader.job.underroof}}
         </div>
     </div>
-
+</div>
+<div class="row">
     <div class="col-md-6">
-        <div id="gridBids" ui-grid="ctrl.gridOptions" ui-grid-edit class="grid">
+        <div id="gridBids" ui-grid="ctrl.gridOptions" ui-grid-selection class="grid">
         </div>
     </div>
     <div class="col-md-6">

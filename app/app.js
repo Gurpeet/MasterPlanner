@@ -1,5 +1,5 @@
 (function () {
-    angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'app.config', 'app.services'])
+    angular.module('app', ['ui.router', 'ui.grid', 'ui.grid.edit', 'ui.grid.cellNav', 'ui.grid.selection', 'app.config', 'app.services'])
         .config(['$stateProvider', '$urlRouterProvider',
             function ($stateProvider, $urlRouterProvider) {
                 $stateProvider
@@ -33,7 +33,15 @@
                         controller: 'bidController as ctrl',
                         resolve: {
                             tableName: [function () {
-                                return 'bid-estimate';
+                                return 'bid-estimates';
+                            }],
+                            projectDetails: ['$stateParams', 'providerService', 'utils', function ($stateParams, providerService, utils) {
+                                return providerService.readFile('projects').then(function(projects){
+                                    return  utils.filterDetailsForProject(projects, $stateParams.id, 'id');
+                                });
+                            }],
+                            bidestimates: ['providerService', function (providerService) {
+                                return providerService.readFile('bid-estimates');
                             }]
                         }
                     })

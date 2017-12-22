@@ -17,7 +17,7 @@
                 };
 
                 function bindGrid() {
-                    self.gridOptions.data = utils.filterDetailsForProject(allSubcontractors, $stateParams.id);
+                    self.gridOptions.data = utils.filterDetailsForProject(allSubcontractors, $stateParams.id, 'projectid');
                 };
 
 

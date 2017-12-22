@@ -10,9 +10,9 @@
                 return maxId;
             };
 
-            this.filterDetailsForProject = function (arrData, projectid) {
+            this.filterDetailsForProject = function (arrData, fieldVal, fieldName) {
                 return $filter('filter')(arrData, function (item) {
-                    return (item.projectid == projectid);
+                    return (item[fieldName] == fieldVal);
                 });
             };
 

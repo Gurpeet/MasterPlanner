@@ -59,7 +59,7 @@
                 };
 
                 function bindGrid() {
-                    self.gridOptions.data = utils.filterDetailsForProject(allFlowcharts, $stateParams.id);
+                    self.gridOptions.data = utils.filterDetailsForProject(allFlowcharts, $stateParams.id, 'projectid');
                 };
 
 
