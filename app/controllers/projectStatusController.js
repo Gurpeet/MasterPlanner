@@ -1,7 +1,8 @@
 (function () {
     angular.module('app')
-        .controller('projectStatusController', [function () {
+        .controller('projectStatusController', ['projectDetails', function (projectDetails) {
             var self = this;
+            self.statusheader = projectDetails[0];
             function init() {
                 self.gridBidOptions = {
                     columnDefs: [
@@ -10,7 +11,8 @@
                         { name: 'Total', field: 'address' },
                         { name: '% Total', field: 'address' },
                         { name: 'Actual', field: 'address' },
-                        { name: 'Variance', field: 'address' }
+                        { name: 'Variance', field: 'address' },
+                        { name: 'Completed', field: 'address' }
                     ]
                 };
 

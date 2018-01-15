@@ -36,8 +36,8 @@
                                 return 'bid-estimates';
                             }],
                             projectDetails: ['$stateParams', 'providerService', 'utils', function ($stateParams, providerService, utils) {
-                                return providerService.readFile('projects').then(function(projects){
-                                    return  utils.filterDetailsForProject(projects, $stateParams.id, 'id');
+                                return providerService.readFile('projects').then(function (projects) {
+                                    return utils.filterDetailsForProject(projects, $stateParams.id, 'id');
                                 });
                             }],
                             bidestimates: ['providerService', function (providerService) {
@@ -99,6 +99,11 @@
                         resolve: {
                             tableName: [function () {
                                 return 'project-status';
+                            }],
+                            projectDetails: ['$stateParams', 'providerService', 'utils', function ($stateParams, providerService, utils) {
+                                return providerService.readFile('projects').then(function (projects) {
+                                    return utils.filterDetailsForProject(projects, $stateParams.id, 'id');
+                                });
                             }]
                         }
                     })

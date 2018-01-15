@@ -1,49 +1,49 @@
 <div class="row">
-
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div class="form-group">
-            Job Address : {{ctrl.bidheader.job_address}}
+            Job Address : {{ctrl.statusheader.job.address}}
         </div>
     </div>
     <div class="col-xs-5 col-sm-5 col-md-5">
         <div class="form-group">
-            Slab Square Footage : {{ctrl.bidheader.slab_square_footage}}
+            Slab Square Footage : {{ctrl.statusheader.job.slab}}
         </div>
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div class="form-group">
-            Total : {{ctrl.bidheader.total_price}}
+            Total : {{ctrl.statusheader.total_price}}
         </div>
     </div>
     <div class="col-xs-5 col-sm-5 col-md-5">
         <div class="form-group">
-            A/C & Heated Square Footage : {{ctrl.bidheader.ac_heated_square_footage}}
+            A/C & Heated Square Footage : {{ctrl.statusheader.job.acheated}}
         </div>
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-7 col-sm-7 col-md-7">
         <div class="form-group">
-            Actual : {{ctrl.bidheader.actual_price}}
+            Actual : {{ctrl.statusheader.actual_price}}
         </div>
     </div>
     <div class="col-xs-5 col-sm-5 col-md-5">
         <div class="form-group">
-            Under Roof Square Footage : {{ctrl.bidheader.under_roof_square_footage}}
+            Under Roof Square Footage : {{ctrl.statusheader.job.underroof}}
         </div>
     </div>
-
+</div>
+<div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            Variance : {{ctrl.bidheader.variance}}
+            Variance : {{ctrl.statusheader.variance}}
         </div>
     </div>
+</div>
 
-    <div class="col-md-6">
-        <div id="gridBids" ui-grid="ctrl.gridBidOptions" ui-grid-edit class="grid">
-        </div>
-    </div>
-    <div class="col-md-6">
+<div class="row">
+    <div class="col-md-6 ">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -54,9 +54,25 @@
         </div>
 
         <div class="row">
+            <div class="col-md-4 pull-right">
+                <input type="submit" value="Report" class="btn btn-info btn-block">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <div id="gridBids" ui-grid="ctrl.gridTaskOptions" ui-grid-edit class="grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    <input type="checkbox" name="task_completed" id="task_completed" class="" ng-model="ctrl.owner.task_completed" placeholder="Task Completed">                    Task Completed </input>
+                    <input type="checkbox" name="task_completed" id="task_completed" class="" ng-model="ctrl.owner.task_completed" placeholder="Task Completed"> Task Completed </input>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">

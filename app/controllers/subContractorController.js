@@ -7,6 +7,7 @@
                 function save() {
                     return providerService.writeFile(tableName, allSubcontractors).then(function (res) {
                         console.log('saved');
+                        //Get after save
                     }, function (err) {
                         console.log('error');
                     });
@@ -27,7 +28,8 @@
                     self.gridOptions.columnDefs = [
                         { name: 'id', field: 'id', enableCellEdit: false, visible: false },
                         { name: 'Subcontractor', field: 'name', enableCellEdit: true },
-                        { name: 'Mailing Address', field: 'email', enableCellEdit: true },
+                        { name: 'Email', field: 'email', enableCellEdit: true },
+                        { name: 'Mailing Address', field: 'address', enableCellEdit: true },
                         { name: 'Phone', field: 'phone', enableCellEdit: true },
                         { name: 'S S #', field: 'ssn', enableCellEdit: true },
                         { name: 'Workers Comp', field: 'worker_compensation', enableCellEdit: true },
