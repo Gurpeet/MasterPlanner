@@ -54,11 +54,11 @@
                             }]
                         }
                     })
-                    // .state('menu.biddetails', {
-                    //     url: '/bidestimates',
-                    //     templateUrl: 'app/views/bidestimate/bidestimates.html',
-                    //     controller: 'bidEstimatesController as ctrl'
-                    // })
+                    .state('menu.biddetails', {
+                        url: '/bidestimates',
+                        templateUrl: 'app/views/bidestimate/bidestimates.html',
+                        controller: 'bidEstimatesController as ctrl'
+                    })
                     .state('projectlist', {
                         url: '/projectlist',
                         templateUrl: 'app/views/projectlist/index.html',
