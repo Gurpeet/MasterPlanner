@@ -7,9 +7,9 @@
 
                 angular.forEach(costvariance, function (row, idx) {
                     row.getItem = function () {
-                        let item_id = this.item_id;
+                        let itemid = this.itemid;
                         var filterItem = items.filter(function (item) {
-                            return item.item_id == item_id;
+                            return item.itemid == itemid;
                         });
                         return filterItem[0].task;
                     };

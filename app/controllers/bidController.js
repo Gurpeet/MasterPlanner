@@ -11,14 +11,14 @@
                 function init() {
                     self.gridOptions = { multiSelect: false };
                     self.gridOptions.columnDefs = [
-                        { name: 'BidId', field: 'bid_id', visible: false },
-                        { name: 'Task', field: 'project' },
-                        { name: 'Notes', field: 'owner' },
-                        { name: 'Is Allowance?', field: 'address' },
-                        { name: 'Price/Square Footage', field: 'address' },
-                        { name: 'Square Footage', field: 'address' },
-                        { name: 'Total', field: 'address' },
-                        { name: '', field: 'id', width: "5%", cellTemplate: '<div class="ngCellText ui-grid-cell-contents"><i class="fa fa-sign-in fa-lg" ng-click="grid.appScope.udpate(row.entity.bid_id)" aria-hidden="true"></i></div>' }
+                        { name: 'BidId', field: 'id', visible: false },
+                        { name: 'Task', field: 'task' },
+                        { name: 'Notes', field: 'notes' },
+                        { name: 'Is Allowance?', field: 'isallowance' },
+                        { name: 'Price/Square Footage', field: 'price_per_square_footage' },
+                        { name: 'Square Footage', field: 'square_footage' },
+                        { name: 'Total', field: 'total' },
+                        { name: '', field: 'id', width: "5%", cellTemplate: '<div class="ngCellText ui-grid-cell-contents"><i class="fa fa-sign-in fa-lg" ng-click="grid.appScope.udpate(row.entity.id)" aria-hidden="true"></i></div>' }
                     ];
                     //'<div class="ngCellText ui-grid-cell-contents">  <div ng-click="grid.appScope.rowClick(row)">{{COL_FIELD}}</div></div>'
                     bindGrid();

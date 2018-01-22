@@ -79,7 +79,10 @@
                         resolve: {
                             tableName: [function () {
                                 return 'projects';
-                            }]
+                            }],
+                            itemList: ['providerService', function (providerService) {
+                                return providerService.readFile('item-list');
+                            }],
                         }
                     })
                     .state('menu.updateproject', {
