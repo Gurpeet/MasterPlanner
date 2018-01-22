@@ -1,0 +1,422 @@
+[
+    {
+        "id": 1,
+        "task": "Lot or Land Cost"
+    },
+    {
+        "id": 2,
+        "task": "Lot Closing Cost"
+    },
+    {
+        "id": 3,
+        "task": "Bank Fees"
+    },
+    {
+        "id": 4,
+        "task": "Blueprints ( One Story )"
+    },
+    {
+        "id": 5,
+        "task": "Blueprints ( Two Story )"
+    },
+    {
+        "id": 6,
+        "task": "School Fees"
+    },
+    {
+        "id": 7,
+        "task": "Miscellaneous Fees"
+    },
+    {
+        "id": 8,
+        "task": "City Permit Fee"
+    },
+    {
+        "id": 9,
+        "task": "Impact Fee"
+    },
+    {
+        "id": 10,
+        "task": "Water Tap Fee"
+    },
+    {
+        "id": 11,
+        "task": "Exterminators Fee"
+    },
+    {
+        "id": 12,
+        "task": "Sewer Tap Fee"
+    },
+    {
+        "id": 13,
+        "task": "Perk Test Fee"
+    },
+    {
+        "id": 14,
+        "task": "Septic Tank Allowance"
+    },
+    {
+        "id": 15,
+        "task": "Warranty -Startup Fee"
+    },
+    {
+        "id": 16,
+        "task": "Temporary Electric Pole"
+    },
+    {
+        "id": 17,
+        "task": "Lot Clear and Pad Setup "
+    },
+    {
+        "id": 18,
+        "task": "Soil Testing Fee"
+    },
+    {
+        "id": 19,
+        "task": "Retainer Wall System"
+    },
+    {
+        "id": 20,
+        "task": "Engineering Fees"
+    },
+    {
+        "id": 21,
+        "task": "Builders Risk Insurance"
+    },
+    {
+        "id": 22,
+        "task": "Foundation Engineering"
+    },
+    {
+        "id": 23,
+        "task": "Postension Cables"
+    },
+    {
+        "id": 24,
+        "task": "Formboard Survey"
+    },
+    {
+        "id": 25,
+        "task": "Sand and Dirt"
+    },
+    {
+        "id": 26,
+        "task": "Piers"
+    },
+    {
+        "id": 27,
+        "task": "Plumbing Rough in"
+    },
+    {
+        "id": 28,
+        "task": "Plumbing Top Out"
+    },
+    {
+        "id": 29,
+        "task": "Plumbing Final"
+    },
+    {
+        "id": 30,
+        "task": "Plumbing (gas)"
+    },
+    {
+        "id": 31,
+        "task": "Electric Floor Outlets Set"
+    },
+    {
+        "id": 32,
+        "task": "Concrete Pumping"
+    },
+    {
+        "id": 33,
+        "task": "Foundation"
+    },
+    {
+        "id": 34,
+        "task": "Flatwork "
+    },
+    {
+        "id": 35,
+        "task": "Lumber"
+    },
+    {
+        "id": 36,
+        "task": "Framers ( One Story )"
+    },
+    {
+        "id": 37,
+        "task": "Framers ( Two Story )"
+    },
+    {
+        "id": 38,
+        "task": "Windows"
+    },
+    {
+        "id": 39,
+        "task": "Roof"
+    },
+    {
+        "id": 40,
+        "task": "Skylight-Tranom-Sidelight"
+    },
+    {
+        "id": 41,
+        "task": "A/C & Heat Rough In"
+    },
+    {
+        "id": 42,
+        "task": "A/C & Heat Final"
+    },
+    {
+        "id": 43,
+        "task": "Electrical RoughI-in"
+    },
+    {
+        "id": 44,
+        "task": "Electrical Final "
+    },
+    {
+        "id": 45,
+        "task": "Telephone Installation/ Cable"
+    },
+    {
+        "id": 46,
+        "task": "Ext. Door Allowance"
+    },
+    {
+        "id": 47,
+        "task": "Security System "
+    },
+    {
+        "id": 48,
+        "task": "Intercom System Allowance"
+    },
+    {
+        "id": 49,
+        "task": "Vacuum System wance"
+    },
+    {
+        "id": 5,
+        "task": "All Insulation"
+    },
+    {
+        "id": 51,
+        "task": "Sheetrock"
+    },
+    {
+        "id": 52,
+        "task": "Tape, Bed & Texture"
+    },
+    {
+        "id": 53,
+        "task": "Cabinets Allowance"
+    },
+    {
+        "id": 54,
+        "task": "Interior Door amd Trim"
+    },
+    {
+        "id": 55,
+        "task": "Trim Labor"
+    },
+    {
+        "id": 56,
+        "task": "Garage Door Allolwance"
+    },
+    {
+        "id": 57,
+        "task": "Brick-Access-Mason"
+    },
+    {
+        "id": 58,
+        "task": "Stucco"
+    },
+    {
+        "id": 59,
+        "task": "Fireplace Allowance"
+    },
+    {
+        "id": 60,
+        "task": "All Tile Installed"
+    },
+    {
+        "id": 61,
+        "task": "Interior / Exterior Paint"
+    },
+    {
+        "id": 62,
+        "task": "Kitchen Counter Tops "
+    },
+    {
+        "id": 63,
+        "task": "All Marble"
+    },
+    {
+        "id": 64,
+        "task": "Lighting Allowance"
+    },
+    {
+        "id": 65,
+        "task": "Appliance Allowance"
+    },
+    {
+        "id": 66,
+        "task": "Mirrors& Shower Doors"
+    },
+    {
+        "id": 67,
+        "task": "Hardware Allowance"
+    },
+    {
+        "id": 68,
+        "task": "Carpet and Viny"
+    },
+    {
+        "id": 69,
+        "task": "Other Floor Coverings"
+    },
+    {
+        "id": 70,
+        "task": "Garage Door Opener"
+    },
+    {
+        "id": 71,
+        "task": "Wall Paper Installed"
+    },
+    {
+        "id": 72,
+        "task": "Mini-Blinds Allowance"
+    },
+    {
+        "id": 73,
+        "task": "Gutters and Installation "
+    },
+    {
+        "id": 74,
+        "task": "Landscape Allowance"
+    },
+    {
+        "id": 75,
+        "task": "Hydromulch or Sod "
+    },
+    {
+        "id": 76,
+        "task": "MAILBOX Allowance"
+    },
+    {
+        "id": 77,
+        "task": "Lockout"
+    },
+    {
+        "id": 78,
+        "task": "Exterior Cleaning"
+    },
+    {
+        "id": 79,
+        "task": "Interior Cleaning"
+    },
+    {
+        "id": 80,
+        "task": "Final Grade"
+    },
+    {
+        "id": 81,
+        "task": "Fence Allowance"
+    },
+    {
+        "id": 82,
+        "task": "Decorating Allowance"
+    },
+    {
+        "id": 83,
+        "task": "Drapery Allowance"
+    },
+    {
+        "id": 84,
+        "task": "Survey"
+    },
+    {
+        "id": 85,
+        "task": "Temporary Utilities"
+    },
+    {
+        "id": 86,
+        "task": "Columns Allowance"
+    },
+    {
+        "id": 87,
+        "task": "Shutters Allowance"
+    },
+    {
+        "id": 88,
+        "task": "Misc. Custom Features"
+    },
+    {
+        "id": 89,
+        "task": "Loss Recap"
+    },
+    {
+        "id": 90,
+        "task": "Appraisals"
+    },
+    {
+        "id": 91,
+        "task": "Interm Intrest"
+    },
+    {
+        "id": 92,
+        "task": "Discount Points"
+    },
+    {
+        "id": 93,
+        "task": "Swimming Pool Allowance"
+    },
+    {
+        "id": 94,
+        "task": "Hot Tub Allowance"
+    },
+    {
+        "id": 95,
+        "task": "Wood Deck Allowance"
+    },
+    {
+        "id": 96,
+        "task": "Sprinkler System Allowance"
+    },
+    {
+        "id": 97,
+        "task": "French Drain Allowance"
+    },
+    {
+        "id": 98,
+        "task": "Warranty Premium"
+    },
+    {
+        "id": 99,
+        "task": "Buyers Closing Cost"
+    },
+    {
+        "id": 100,
+        "task": "Sales Fee ( Realtors Fee)"
+    },
+    {
+        "id": 101,
+        "task": "Misc. Closing Cost"
+    },
+    {
+        "id": 102,
+        "task": "Utility or Miscellaneous Refund"
+    },
+    {
+        "id": 103,
+        "task": "Change Order"
+    },
+    {
+        "id": 104,
+        "task": "Title Policy"
+    },
+    {
+        "id": 105,
+        "task": "Portable Toilets"
+    }
+]

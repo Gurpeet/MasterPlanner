@@ -1,0 +1,76 @@
+<div class="row">
+
+    <div class="col-xs-7 col-sm-7 col-md-7">
+        <div class="form-group">
+            Job Address : {{ctrl.bidheader.job_address}}
+        </div>
+    </div>
+    <div class="col-xs-5 col-sm-5 col-md-5">
+        <div class="form-group">
+            Slab Square Footage : {{ctrl.bidheader.slab_square_footage}}
+        </div>
+    </div>
+
+    <div class="col-xs-7 col-sm-7 col-md-7">
+        <div class="form-group">
+            Total : {{ctrl.bidheader.total_price}}
+        </div>
+    </div>
+    <div class="col-xs-5 col-sm-5 col-md-5">
+        <div class="form-group">
+            A/C & Heated Square Footage : {{ctrl.bidheader.ac_heated_square_footage}}
+        </div>
+    </div>
+
+    <div class="col-xs-7 col-sm-7 col-md-7">
+        <div class="form-group">
+            Actual : {{ctrl.bidheader.actual_price}}
+        </div>
+    </div>
+    <div class="col-xs-5 col-sm-5 col-md-5">
+        <div class="form-group">
+            Under Roof Square Footage : {{ctrl.bidheader.under_roof_square_footage}}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            Variance : {{ctrl.bidheader.variance}}
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div id="gridBids" ui-grid="ctrl.gridBidOptions" ui-grid-edit class="grid">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <div id="gridBids" ui-grid="ctrl.gridBidOptions" ui-grid-edit class="grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="checkbox" name="task_completed" id="task_completed" class="" ng-model="ctrl.owner.task_completed" placeholder="Task Completed">
+                        Task Completed
+                    </input>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="text" name="task_total" id="task_total" class="" ng-model="ctrl.owner.task_total" placeholder="Task Total" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 pull-right">
+                <input type="submit" value="Save" class="btn btn-info btn-block">
+            </div>
+        </div>
+    </div>
+</div>

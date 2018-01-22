@@ -1,0 +1,612 @@
+/* body { padding-top: 3.2rem; }
+
+.grid {
+  height: 70vh; 
+}
+
+h2 {
+  margin-bottom: 1.2rem;
+  float: left;
+  padding-left: .8rem;
+}
+
+.albumImage img { margin-bottom: .4rem; }
+
+.angLogo {
+  float: left;
+  width: 34px;
+  padding-top: 1.9rem;
+}
+
+.badge .glyphicon { padding-right: .4rem; }
+
+label, select {
+  float: right;
+  margin-left: 1rem;
+}
+
+.wrapper .list {
+    list-style: none;
+    height: 500px;
+    //margin-left: 5.6rem;
+    overflow-y: auto;
+  }
+
+.wrapper img {
+    width: 140px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: block;
+    border: 2px solid #fff;
+}
+
+
+.wrapper img:hover {
+  box-shadow: 0px 1px 4px #444;
+  transition: all .2s ease-in-out;
+  border-color: #fff;
+}
+
+.wrapper img:hover {
+  opacity: .74;
+  box-shadow: 0px 1px 8px #666;
+} */
+
+
+/* Master Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+body {
+  font-family: "robotoregular";
+  font-size: 14px;
+  color: #303641;  overflow:hidden;
+}
+
+ul li {
+  list-style: none;
+}
+@-ms-viewport {
+  width: auto !important;
+}
+a,
+button {
+  outline: 0 !important;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+@font-face {
+font-family: 'robotobold';
+src: url("../fonts/roboto-bold-webfont.eot");
+src: url("../fonts/roboto-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-bold-webfont.woff") format("woff"), url("../fonts/roboto-bold-webfont.ttf") format("truetype"), url("../fonts/roboto-bold-webfont.svg#robotobold") format("svg");
+font-weight: normal;
+font-style: normal; }
+@font-face {
+font-family: 'robotomedium';
+src: url("../fonts/roboto-medium-webfont.eot");
+src: url("../fonts/roboto-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-medium-webfont.woff") format("woff"), url("../fonts/roboto-medium-webfont.ttf") format("truetype"), url("../fonts/roboto-medium-webfont.svg#robotomedium") format("svg");
+font-weight: normal;
+font-style: normal; }
+@font-face {
+font-family: 'robotoregular';
+src: url("../fonts/roboto-regular-webfont.eot");
+src: url("../fonts/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto-regular-webfont.svg#robotoregular") format("svg");
+font-weight: normal;
+font-style: normal; }
+
+/****common classes****/
+.mCustomScrollbar{  overflow-y:auto; }
+
+/*************************Base CSS End**************************/
+
+/***********************HEADER CSS START************************/
+strong{  font-family: 'robotobold'; font-weight:normal}
+.clr{clear:both}
+.clr10{clear:both; height:10px;}
+h4{margin:0}
+.userdetail {
+  background-color: #f15733;
+  min-height: 36px; margin-top:5px;
+  color: #ffffff; line-height:32px;
+
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #d34726;
+  padding: 0px 0px;
+}
+.userdetail a{color:#fff}
+header .logo {
+  margin: 10px 0 0 10px;
+  max-width:100px;
+  text-align: right;
+}
+header .logo span {
+  display: block;
+  font-size: 9px;
+  font-weight: normal;
+  margin: 0px 0px 0px 5px;
+  line-height: 12px;
+margin-top:5px;
+}
+/**********HEADER NAVBAR CSS START**********/
+
+
+/**********HEADER NAVBAR CSS START**********/
+
+/*************USER INSO SECTION CSS ************/
+
+
+
+/*********************************** Sidebar css start ***********
+******************************************************************/
+
+#wrapper {
+  padding-left: 185px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;  width:100%; height:100%;
+}
+#sidebar-wrapper {
+  z-index: 9;
+  position:absolute;
+  width: 200px;
+  left: 28px;
+  background: #f7f7f7;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-right: 1px solid #c7c7c7;
+  border-left: 1px solid #c7c7c7;
+  border-top: 0;
+}
+#wrapper.toggled {
+  padding-left: 40px;
+}
+#wrapper.toggled #sidebar-wrapper {
+  width: 40px;
+  margin-left: 0px;
+}
+.sidebar-full {
+  height: 100%;
+}
+#sidebar-wrapper a {
+  display: block;
+  padding: 7px;
+  background: #ffffff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidebar-wrapper a:hover {
+  display: block;
+  padding: 7px;
+  background: #65a316;
+  color: #ffffff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidebar-wrapper a:focus {
+  display: block;
+  padding: 7px;
+  background: #65a316;
+  color: #ffffff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidebar-wrapper a:active {
+  display: block;
+  padding: 7px;
+  background: #65a316;
+  color: #ffffff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidebar-wrapper a:hover i {
+  color: #ffffff;
+}
+#sidebar-wrapper li.active>a {
+  background: #65a316;
+  color: #ffffff;
+}
+#sidebar-wrapper li.active>a i {
+  color: #ffffff;
+}
+#sidebar-wrapper a i {
+  display: inline-block;
+  font-size: 21px;
+  margin-right: 11px;
+  height: 27px;
+}
+#sidebar-wrapper ul.nav a {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  height: 38px;
+  overflow: hidden;
+}
+#sidebar-wrapper ul.nav li {
+  margin: 0px;
+}
+#sidebar-wrapper ul.nav li.open ul {
+  left: 100%;
+  top: 0px;
+  margin-top: 0px;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+#sidebar-wrapper .open .dropdown-menu {
+  padding: 0px;
+}
+#sidemenu li a {
+  background: #fff;
+  color: #333;
+}
+#sidemenu li>a:hover {
+  background: #65a316;
+  color: #fff;
+}
+#sidemenu li:hover>a {
+  background: #65a316;
+  color: #fff;
+}
+#sidemenu li>a:focus {
+  display: block;
+  padding: 7px;
+  background: #f15733;
+  color: #fff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidemenu li:focus>a {
+  display: block;
+  padding: 7px;
+  background: #f15733;
+  color: #fff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidemenu li>a:active {
+ display: block;
+  padding: 7px;
+  background: #f15733;
+  color: #fff;
+  border-bottom: 1px solid #c7c7c7;
+}
+#sidemenu li:active>a{
+ display: block;
+  padding: 7px;
+  background: #f15733;
+  color: #fff;
+  border-bottom: 1px solid #c7c7c7;
+}
+.glyphicon-chevron-right {
+  font-size: 0.7em !important;
+  margin-top: 7px;
+}
+/********** Sidebar css END ***********/
+
+/*****************FIXED SECTION START PATIENT STRIP AND SCRILLING*******************
+************************************************************************************/
+
+.fixedhead {
+  padding: 0px;
+ 
+  left: 0px;
+  -webkit-transition: left 0.4s ease;
+  transition: left 0.4s ease;
+  -moz-transition: left 0.3s ease;
+  -o-transition: left 0.4s ease;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+.border-top {
+  border-top: 1px solid #ddd;
+}
+.fixedhead h1 {
+  margin: 0 !important;
+  font-size: 20px;
+  font-family: "robotomedium";
+  margin-top: 7px !important;
+  color: #f15733;
+}
+
+.btnsection {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+/***************scroll btn********/
+
+.scrolltab-case {
+  display: block!important;
+  margin-top: 5px;
+}
+.scrolltab {
+  background: #fff;
+  box-shadow: 0 2px 5px 0 #c9c9c9;
+  -moz-box-shadow: 0 2px 5px 0 #c9c9c9;
+  -webkit-box-shadow: 0 2px 5px 0 #c9c9c9;
+}
+
+.scrolltab ul li:last-child a:after {
+  width: 0px;
+}
+.mainheading a {
+  font-size: 13px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: #303641;
+  text-decoration: none;
+}
+.mainheading .text a {
+  color: #303641;
+  font-family: "robotomedium";
+  font-size: 16px;
+  text-decoration: none;
+}
+.mainheading a:hover {
+  text-decoration: none;
+  color: #f15733;
+}
+.mainheading span {
+  font-size: 13px;
+  color: #303641;
+}
+.mainheadingForm {
+  margin: 0 !important;
+  color: #303641;
+  font-size: 16px;
+  font-family: "robotomedium";
+  line-height: 40px;
+}
+/************Report page css start option 2***********/
+
+a{color:#333}
+
+/******************patient form***************/
+/******************new note design*************/
+
+
+
+
+/*********************headings**********************/
+
+.graybg {
+  background-color: #f7f7f7!important;
+  border: 1px solid #e1e1e1;
+  margin-top: 3px;
+  margin-bottom: 7px;
+  padding-top: 5px;
+}
+.whitebg {
+  background-color: #fff!important;
+  border: 1px solid #fff;
+  margin-top: 3px;
+  margin-bottom: 7px;
+  padding-top: 5px;
+}
+.whitebg .checkbox{ margin:9px 0;}
+.graybgSeach {
+  background-color: #f7f7f7;
+  border-left: 0;
+  border-right: 0;
+  padding-top: 10px;
+}
+.graybgAdvanceSeach {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e1e1e1;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.glyphicon-minus {
+  font-size: 0.7em !important;
+  margin-right: 5px;
+}
+.glyphicon-plus {
+  font-size: 0.7em !important;
+  margin-right: 5px;
+}
+.BlankSpace {
+  height: 7px;
+  margin: 0;
+  padding: 0;
+  clear: both
+}
+.BlankSpace2 {
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  clear: both
+}
+.paging {
+  margin: 0px !important;
+  color: #303641;
+  font-size: 14px;
+  font-family: "robotoregular";
+  margin-bottom: -13px !important;
+  line-height: 40px;
+}
+
+.SearchHead {
+  margin-bottom: 0;
+}
+form label {
+  color: #2c2c2c;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.form-group label {
+  color: #2c2c2c;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+.label-normal span {
+  color: #757575;
+  font-size: 10px;
+}
+form .checkbox input[type="checkbox"] {
+  margin-top: 0px;
+}
+form .radio input[type="radio"] {
+  margin-top: 0px;
+}
+.customsearch .input-group-addon {
+  padding: 0px;
+  background-color: #ffffff;
+}
+.customsearch .input-group-addon button {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.customsearch input[type="text"] {
+  border-left: 0px;
+  border-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.customsearch input[type="text"]:focus {
+  box-shadow: none;
+  border-color: #shadow-color;
+}
+/*.table1{ table-layout:fixed}*/
+
+.table1 th {
+  background: #757575 none repeat scroll 0 0;
+  color: #ffffff;
+  font-weight: normal;
+  white-space: nowrap; vertical-align:middle!important; position:relative;
+}
+.table1 tfoot tr {
+  background: #f7f7f7;
+  font-family: "robotomedium";
+}
+.table1 td {
+/* white-space: nowrap; */vertical-align:middle!important;
+}
+.btn-primary {
+  background: #f15733;
+  border-color:#d34726;
+}
+.btn-primary:hover {
+  background: #d34726;
+}
+.PageButton {
+  margin: 0;
+}
+.PageButton li a {
+  background: #78be20;
+  color: #ffffff;
+}
+.PageButton li a:hover {
+  background: #65a316;
+  color: #ffffff;
+}
+.btnGreen {
+  background: #78be20;  border-color: #65a316;
+}
+.btnGreen:hover {
+  background: #467840!important;
+border-color: #65a316;
+}
+.btnGreen:active {
+  background: #467840!important;
+     border-color: #65a316!important;
+}
+.btnGreen:focus {
+  background: #467840!important;
+     border-color: #65a316!important;
+}
+.tablePolicy td {
+vertical-align:top!important;
+}
+/***************Error message css 14.4.2016******/
+
+/*************model css************/
+
+.clr {
+  clear: both;
+  height: 0px;
+}
+
+
+.table-striped th
+{
+
+background:#65a316;
+}
+
