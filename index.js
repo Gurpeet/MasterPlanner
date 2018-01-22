@@ -2,7 +2,7 @@
 
 const { app, BrowserWindow } = require('electron');
 let win;
-require('electron-reload')(__dirname);
+//require('electron-reload')(__dirname);
 
 
 function createWindow() {
@@ -15,7 +15,7 @@ function createWindow() {
     win.loadURL(`file://${__dirname}/index.html`);
 
     // To open dev tools
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
 
     // Event when window is closed
     win.on('closed', function () {
