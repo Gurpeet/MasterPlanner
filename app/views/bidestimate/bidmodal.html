@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bid Estimates </title>
+
+    <link rel="stylesheet" href="./../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../../../css/styles.css">
+    <!-- <script src='./../../../node_modules/angular/angular.min.js'></script> -->
+</head>
+
+<body ng-app="app" id="page-top">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Bid/Estimates
+                        <small></small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="estimated_notes" ng-model="ctrl.bid.estimated_notes" id="estimated_notes" class="form-control input-sm" rows="4"
+                                        cols="50" placeholder="Estimated Notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="personal_notes" ng-model="ctrl.bid.personal_notes" id="personal_notes" class="form-control input-sm" rows="4"
+                                        cols="50" placeholder="Personal Notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group  pull-left">
+                                    <label for="isallowance">Is this Allowance</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8">
+                                <div class="form-group">
+                                    <select name="isallowance" id="isallowance" class="form-control input-sm">
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-5 col-sm-5 col-md-5">
+                                <div class="form-group  pull-left">
+                                    <label for="pricecalculation">Use Sqf Price Calculation</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-7 col-sm-7 col-md-7">
+                                <div class="form-group">
+                                    <input type="radio" id="pricecalculation" name="pricecalculation" value="1" class=""> Yes
+                                    <input type="radio" id="pricecalculation" name="pricecalculation" value="0" class=""> No
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="price_per_sqfoot" id="price_per_sqfoot" class="form-control input-sm" ng-model="ctrl.owner.price_per_sqfoot"
+                                        placeholder="Price/Square foot">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="square_footage" id="square_footage" class="form-control input-sm" ng-model="ctrl.owner.square_footage"
+                                        placeholder="Square Footage">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="total_price" id="total_price" class="form-control input-sm" ng-model="ctrl.owner.total_price" placeholder="Total Price">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5 pull-right">
+                                <input type="submit" value="Save" class="btn btn-info btn-block">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer, ipcMain } = electron;
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+            const bidEstimate = {
+                estimated_notes: document.querySelector('#estimated_notes').value,
+                personal_notes: document.querySelector('#personal_notes').value,
+                isallowance: document.querySelector('#isallowance').value,
+                pricecalculation: document.querySelector('#pricecalculation').value,
+                price_per_sqfoot: document.querySelector('#price_per_sqfoot').value,
+                square_footage: document.querySelector('#square_footage').value,
+                total_price: document.querySelector('#total_price').value,
+
+            }
+            ipcRenderer.send('bid:add', bidEstimate);
+            //console.log(bidEstimate);
+        }
+
+        ipcMain.on('bid:open', function (event, bidItem) {
+            console.log(bidItem);
+        });
+
+        //require('./../../../app/helpers/configSettings')
+        //require('./../../../app/helpers/utils')
+        //require('./../../../app/services/providerService')
+        //require('./../../../app/app')
+        // require('./../../../app/controllers/homeController')
+        // require('./../../../app/controllers/menuController')
+        // require('./../../../app/controllers/projectListController')
+        //require('./../../../app/controllers/bidController')
+        //require('./../../../app/controllers/bidEstimatesController')
+        // require('./../../../app/controllers/photoController')
+        // require('./../../../app/controllers/bankCopyController')
+        // require('./../../../app/controllers/flowchartController')
+        // require('./../../../app/controllers/subContractorController')
+        // require('./../../../app/controllers/suppliersController')
+        // require('./../../../app/controllers/projectStatusController')
+        // require('./../../../app/controllers/costvarianceController')
+        // require('./../../../app/controllers/projectController')
+    </script>
+</body>
+
+</html>

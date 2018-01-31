@@ -14,8 +14,13 @@ function createWindow() {
 
     win.loadURL(`file://${__dirname}/index.html`);
 
+    // To hide menu toolbar
+    win.setMenu(null);
+    
     // To open dev tools
     //win.webContents.openDevTools();
+
+    win.maximize();
 
     // Event when window is closed
     win.on('closed', function () {
