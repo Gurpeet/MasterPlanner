@@ -61,12 +61,12 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-xs-5 col-sm-5 col-md-5">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group  pull-left">
                                     <label for="pricecalculation">Use Sqf Price Calculation</label>
                                 </div>
                             </div>
-                            <div class="col-xs-7 col-sm-7 col-md-7">
+                            <div class="col-xs-8 col-sm-8 col-md-8">
                                 <div class="form-group">
                                     <input type="radio" id="pricecalculation" name="pricecalculation" value="1" class=""> Yes
                                     <input type="radio" id="pricecalculation" name="pricecalculation" value="0" class=""> No
@@ -133,9 +133,9 @@
             //console.log(bidEstimate);
         }
 
-        ipcMain.on('bid:open', function (event, bidItem) {
-            console.log(bidItem);
-        });
+        // ipcRenderer.on('bid:open', function (event, bidItem) {
+        //     console.log(bidItem);
+        // });
 
         //require('./../../../app/helpers/configSettings')
         //require('./../../../app/helpers/utils')
