@@ -1,13 +1,13 @@
 (function () {
     angular.module('app')
         .controller('bidController', [
-            '$q', '$stateParams', '$scope', 'providerService', 'utils', 'tableName', 'bidestimates', 'projectDetails',
-            function ($q, $stateParams, $scope, providerService, utils, tableName, bidestimates, projectDetails) {
+            '$q', '$state', '$stateParams', '$scope', 'providerService', 'utils', 'tableName', 'bidestimates', 'projectDetails',
+            function ($q, $state, $stateParams, $scope, providerService, utils, tableName, bidestimates, projectDetails) {
 
                 const { remote } = require('electron');
                 const { ipcRenderer, ipcMain } = remote;
                 let win;
-                
+
                 var self = this;
                 let allestimates = bidestimates;
                 self.bidheader = projectDetails[0];
@@ -37,29 +37,48 @@
                             // var win = new BrowserWindow({ width: 800, height: 600 });
                             // win.loadURL(`file://${__dirname}/index.html`);
                             openModal(rowEntity);
-                            console.log(ipcRenderer);
                             //ipcRenderer.send('bid:open', rowEntity);
                         });
                     };
                 };
-                
-                function openModal(rowEntity) {
-                    win = new remote.BrowserWindow({
-                        parent: remote.getCurrentWindow(),
-                        modal: true,
-                        height: 650
-                    });
+                const url = require('url');
+                const path = require('path')
 
-                    var modalUrl = `file://${__dirname}/../views/bidestimate/bidmodal.html`;
-                    win.setMenu(null);
-                    //win.webContents.openDevTools();
-                    win.loadURL(modalUrl);
+                function openModal(rowEntity) {
+                    $state.go('menu.bidmodal', { id: $stateParams.id, itemid: rowEntity.entity.id });
+
+                    // win = new remote.BrowserWindow({
+                    //     parent: remote.getCurrentWindow(),
+                    //     modal: true,
+                    //     height: 650
+                    // });
+
+                    // //var modalUrl = `file://${__dirname}/../views/bidestimate/bidmodal.html`;
+                    // const indexPath = path.resolve(__dirname, '..', 'views', 'bidestimate', 'bidmodal.html');
+
+                    // var indexUrl = url.format({
+                    //     protocol: 'file',
+                    //     pathname: indexPath,
+                    //     slashes: true,
+                    //     hash: encodeURIComponent(rowEntity)
+                    // })
+
+
+                    // win.setMenu(null);
+                    // win.webContents.openDevTools();
+                    // win.loadURL(indexUrl);
+                    // //win.webContents.emit('bidopen', {data: rowEntity});
+                    // //win.webContents.send('bid:open', rowEntity);
                 }
+
+                // process.once('loaded', () => {
+                //     console.log(1);
+                //   })
 
                 // Catch bid add
                 ipcMain.on('bid:add', function (event, bidItem) {
                     console.log(bidItem);
-                    win.close();
+                    win.hide();
                 });
 
                 // self.addNew = function () {

@@ -45,6 +45,24 @@
                             }]
                         }
                     })
+                    .state('menu.bidmodal', {
+                        url: '/bidmodal/:id/:itemid',
+                        templateUrl: 'app/views/bidestimate/bidmodal.html',
+                        controller: 'bidModalController as ctrl',
+                        resolve: {
+                            tableName: [function () {
+                                return 'bid-estimates';
+                            }],
+                            projectDetails: ['$stateParams', 'providerService', 'utils', function ($stateParams, providerService, utils) {
+                                return providerService.readFile('projects').then(function (projects) {
+                                    return utils.filterDetailsForProject(projects, $stateParams.id, 'id');
+                                });
+                            }],
+                            bidestimates: ['providerService', function (providerService) {
+                                return providerService.readFile('bid-estimates');
+                            }]
+                        }
+                    })
                     .state('menu.bidnotes', {
                         url: '/bidnotes/:id',
                         templateUrl: 'app/views/bidnotes/index.html',

@@ -1,3 +1,101 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Bid/Estimates
+                    <small></small>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <textarea name="estimated_notes" ng-model="ctrl.bid.estimated_notes" id="estimated_notes" class="form-control input-sm" rows="4"
+                                    cols="50" placeholder="Estimated Notes"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <textarea name="personal_notes" ng-model="ctrl.bid.personal_notes" id="personal_notes" class="form-control input-sm" rows="4"
+                                    cols="50" placeholder="Personal Notes"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group  pull-left">
+                                <label for="isallowance">Is this Allowance</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8">
+                            <div class="form-group">
+                                <select name="isallowance" id="isallowance" class="form-control input-sm">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group  pull-left">
+                                <label for="pricecalculation">Use Sqf Price Calculation</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8">
+                            <div class="form-group">
+                                <input type="radio" id="pricecalculation" name="pricecalculation" value="1" class=""> Yes
+                                <input type="radio" id="pricecalculation" name="pricecalculation" value="0" class=""> No
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="price_per_sqfoot" id="price_per_sqfoot" class="form-control input-sm" ng-model="ctrl.owner.price_per_sqfoot"
+                                    placeholder="Price/Square foot">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="square_footage" id="square_footage" class="form-control input-sm" ng-model="ctrl.owner.square_footage"
+                                    placeholder="Square Footage">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="total_price" id="total_price" class="form-control input-sm" ng-model="ctrl.owner.total_price" placeholder="Total Price">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 pull-right">
+                            <input type="submit" value="Cancel" ng-click="ctrl.cancel()" class="btn btn-info btn-block">
+                        </div>
+                        <div class="col-md-2 pull-right">
+                            <input type="submit" value="Save" ng-click="ctrl.save()" class="btn btn-info btn-block">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
 <!doctype html>
 <html lang="en">
 
@@ -12,7 +110,7 @@
 
     <link rel="stylesheet" href="./../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./../../../css/styles.css">
-    <!-- <script src='./../../../node_modules/angular/angular.min.js'></script> -->
+    <script src='./../../../node_modules/angular/angular.min.js'></script>
 </head>
 
 <body ng-app="app" id="page-top">
@@ -112,11 +210,11 @@
     </div>
     <script>
         const electron = require('electron');
-        const { ipcRenderer, ipcMain } = electron;
+        const { ipcRenderer, webContents } = electron;
 
         const form = document.querySelector('form');
         form.addEventListener('submit', submitForm);
-
+        
         function submitForm(e) {
             e.preventDefault();
             const bidEstimate = {
@@ -157,4 +255,4 @@
     </script>
 </body>
 
-</html>
+</html> -->
