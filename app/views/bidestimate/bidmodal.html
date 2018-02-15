@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-xs-8 col-sm-8 col-md-8">
                             <div class="form-group">
-                                <select name="isallowance" id="isallowance" class="form-control input-sm">
+                                <select name="isallowance" id="isallowance" class="form-control input-sm" ng-model="ctrl.bid.isallowance">
                                     <option value="1">Yes</option>
                                     <option value="0">No</option>
                                 </select>
@@ -50,8 +50,8 @@
                         </div>
                         <div class="col-xs-8 col-sm-8 col-md-8">
                             <div class="form-group">
-                                <input type="radio" id="pricecalculation" name="pricecalculation" value="1" class=""> Yes
-                                <input type="radio" id="pricecalculation" name="pricecalculation" value="0" class=""> No
+                                <input type="radio" id="pricecalculation" name="pricecalculation" value="1" ng-model="ctrl.bid.price_calculation" class=""> Yes
+                                <input type="radio" id="pricecalculation" name="pricecalculation" value="0" ng-model="ctrl.bid.price_calculation" class=""> No
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="price_per_sqfoot" id="price_per_sqfoot" class="form-control input-sm" ng-model="ctrl.owner.price_per_sqfoot"
+                                <input type="text" name="price_per_sqfoot" id="price_per_sqfoot" class="form-control input-sm" ng-model="ctrl.bid.price_per_sqfoot"
                                     placeholder="Price/Square foot">
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="square_footage" id="square_footage" class="form-control input-sm" ng-model="ctrl.owner.square_footage"
+                                <input type="text" name="square_footage" id="square_footage" class="form-control input-sm" ng-model="ctrl.bid.square_footage"
                                     placeholder="Square Footage">
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="text" name="total_price" id="total_price" class="form-control input-sm" ng-model="ctrl.owner.total_price" placeholder="Total Price">
+                                <input type="text" name="total_price" id="total_price" class="form-control input-sm" ng-model="ctrl.bid.total_price" placeholder="Total Price">
                             </div>
                         </div>
                     </div>

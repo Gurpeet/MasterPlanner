@@ -1,8 +1,8 @@
 (function () {
     angular.module('app')
         .controller('bidModalController', [
-            '$q', '$stateParams', '$state', 'providerService', 'utils', 'tableName', 'bidestimates', 'projectDetails',
-            function ($q, $stateParams, $state, providerService, utils, tableName, bidestimates, projectDetails) {
+            '$q', '$filter', '$stateParams', '$state', 'providerService', 'utils', 'tableName', 'bidestimates', 'projectDetails',
+            function ($q, $filter, $stateParams, $state, providerService, utils, tableName, bidestimates, projectDetails) {
 
                 // const { remote } = require('electron');
                 // const { ipcRenderer, ipcMain } = remote;
@@ -13,14 +13,15 @@
                 self.bidheader = projectDetails[0];
 
                 function init() {
-                    console.log(allestimates);
-                    console.log(self.bidheader);
+                    self.bid = $filter('filter')(allestimates, function (item) {
+                        return (item['id'] == $stateParams.itemid);
+                    })[0];
                 };
                 
-
-                
                 self.save = function () {
-                    self.cancel();
+                    save().then(function(){
+                        self.cancel();
+                    });
                 };
 
                 self.cancel = function() {
@@ -37,10 +38,6 @@
 
                 function get() {
                     return providerService.readFile(tableName);
-                };
-
-                function bindGrid() {
-                    self.gridOptions.data = utils.filterDetailsForProject(allestimates, $stateParams.id, 'projectid');
                 };
 
                 init();

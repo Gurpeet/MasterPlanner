@@ -17,11 +17,11 @@
                     self.gridOptions.columnDefs = [
                         { name: 'BidId', field: 'id', visible: false },
                         { name: 'Task', field: 'task' },
-                        { name: 'Notes', field: 'notes' },
-                        { name: 'Is Allowance?', field: 'isallowance' },
-                        { name: 'Price/Square Footage', field: 'price_per_square_footage' },
+                        { name: 'Notes', field: 'estimated_notes' },
+                        { name: 'Is Allowance?', field: 'isallowance', cellTemplate: '<div ng-if="row.entity.isallowance && row.entity.isallowance == 0">No</div><div ng-if="row.entity.isallowance != 0">Yes</div>' },
+                        { name: 'Price/Square Footage', field: 'price_per_sqfoot' },
                         { name: 'Square Footage', field: 'square_footage' },
-                        { name: 'Total', field: 'total' }
+                        { name: 'Total', field: 'total_price' }
                         //{ name: '', field: 'id', width: "5%", cellTemplate: '<div class="ngCellText ui-grid-cell-contents"><i class="fa fa-sign-in fa-lg" ng-click="grid.appScope.udpate(row.entity.id)" aria-hidden="true"></i></div>' }
                     ];
                     bindGrid();
